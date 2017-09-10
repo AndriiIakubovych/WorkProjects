@@ -1,0 +1,845 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\GraphExpImp.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\GraphExpImp.ico"
+IDR_GRAPHETYPE          ICON    DISCARDABLE     "res\\GraphExpImpDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "Операции"
+    BEGIN
+        MENUITEM "Создать новый профиль\tCtrl + P", 
+                                                ID_OPERATIONS_CREATE_PROFILE
+        MENUITEM "Добавить файл в профиль\tCtrl + F", 
+                                                ID_OPERATIONS_CREATE_FILE
+        MENUITEM "Создать профиль по образцу\tCtrl + S", 
+                                                ID_OPERATIONS_CREATE_SAMPLE
+        MENUITEM "Редактировать\tCtrl + E",     ID_OPERATIONS_EDIT
+        MENUITEM "Удалить\tCtrl + D",           ID_OPERATIONS_DELETE
+        MENUITEM "Выполнить\tCtrl + R",         ID_OPERATIONS_EXECUTE
+        MENUITEM SEPARATOR
+        MENUITEM "Выход\tCtrl + X",             ID_APP_EXIT
+    END
+    POPUP "Справка"
+    BEGIN
+        MENUITEM "Помощь\tCtrl + H",            ID_PROGRAM_HELP
+        MENUITEM "О программе\tCtrl + A",       ID_PROGRAM_ABOUT
+    END
+END
+
+IDR_POPUP_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Всплывающее меню"
+    BEGIN
+        MENUITEM "Создать новый профиль",       ID_POPUP_CREATE_PROFILE
+        MENUITEM "Добавить файл в профиль",     ID_POPUP_CREATE_FILE
+        MENUITEM "Создать профиль по образцу",  ID_POPUP_CREATE_SAMPLE
+        MENUITEM "Редактировать",               ID_POPUP_EDIT
+        MENUITEM "Удалить",                     ID_POPUP_DELETE
+        MENUITEM "Выполнить",                   ID_POPUP_EXECUTE
+    END
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "GraphExpImp MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "GraphExpImp\0"
+            VALUE "LegalCopyright", "Copyright (C) 2010\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "GraphExpImp.EXE\0"
+            VALUE "ProductName", "GraphExpImp Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ADD_PROFILE_DIALOG DIALOG DISCARDABLE  0, 0, 488, 302
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Создание профиля"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Подтвердить",IDOK,7,281,232,14,WS_DISABLED
+    PUSHBUTTON      "Отмена",IDCANCEL,248,281,233,14
+    LTEXT           "Папка:",IDC_SELECT_FOLDER,226,96,24,8
+    EDITTEXT        IDC_FOLDER,226,105,207,14,ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "...",IDC_OPEN_SELECT_FOLDER,442,105,28,14
+    LTEXT           "Раздел:",IDC_SELECT_SECTION,226,59,28,8
+    COMBOBOX        IDC_SECTION,226,68,245,153,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Параметры преобразования координат",
+                    IDC_PARAM_TRANS_COOR,7,36,199,237
+    LTEXT           "Величина сдвига влево по оси абсцисс:",
+                    IDC_INPUT_SHIFT_X,17,102,179,8
+    LTEXT           "Величина сдвига вниз по оси ординат:",IDC_INPUT_SHIFT_Y,
+                    17,128,178,8
+    LTEXT           "Коэффициент сжатия по оси абсцисс:",IDC_INPUT_FACTOR_X,
+                    17,48,179,8
+    LTEXT           "Коэффициент сжатия по оси ординат:",IDC_INPUT_FACTOR_Y,
+                    17,75,178,8
+    LTEXT           "Поворот в градусах по часовой стрелке:",IDC_INPUT_TURN,
+                    17,155,177,8
+    CONTROL         "Обычный",IDC_USUAL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED | WS_GROUP,27,249,47,10
+    CONTROL         "Инверсный",IDC_INVERT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,82,249,55,10
+    LTEXT           "Наименование графической области:",
+                    IDC_SELECT_GRAPH_AREA_NAME,226,170,176,8,WS_DISABLED
+    COMBOBOX        IDC_GRAPH_AREA_NAME,226,179,246,83,CBS_DROPDOWNLIST | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Имя профиля экспорта:",IDC_INPUT_NAME_PROFILE,225,21,
+                    244,8
+    GROUPBOX        "Исходный порядок координат",
+                    IDC_INITIAL_ORDER_COORDINATES,17,238,179,26,WS_DISABLED
+    GROUPBOX        "Параметры экспорта",IDC_PARAMETERS_EXPORT,216,135,265,
+                    138
+    GROUPBOX        "Единица измерения длины",IDC_UNIT,226,238,245,26
+    CONTROL         "м",IDC_METRE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,235,
+                    249,21,10
+    CONTROL         "мм",IDC_MILLIMETRE,"Button",BS_AUTORADIOBUTTON,262,249,
+                    27,10
+    GROUPBOX        "Характеристики профиля",IDC_CHARACTERISTICS_PROFILE,216,
+                    7,265,123
+    CONTROL         "Графическая область",IDC_GRAPH_AREA,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,226,151,92,10
+    LTEXT           "Вид профиля:",IDC_SELECT_TYPE_PROFILE,7,7,60,8
+    COMBOBOX        IDC_TYPE_PROFILE,7,16,199,73,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_NAME_PROFILE,226,30,244,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FACTOR_X,17,57,179,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FACTOR_Y,17,84,179,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SHIFT_X,17,111,179,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SHIFT_Y,17,137,179,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TURN,17,164,179,14,ES_AUTOHSCROLL
+    LTEXT           "Размер сетки по горизонтали:",IDC_INPUT_SIZE_X,17,182,
+                    177,8,WS_DISABLED
+    EDITTEXT        IDC_SIZE_X,17,191,179,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Размер сетки по вертикали:",IDC_INPUT_SIZE_Y,17,209,177,
+                    8,WS_DISABLED
+    EDITTEXT        IDC_SIZE_Y,17,218,179,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Описание проекции:",IDC_INPUT_DESCR_PROJECTION,225,203,
+                    70,8,WS_DISABLED
+    EDITTEXT        IDC_DESCRIPTION_PROJECTION,226,212,245,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+END
+
+IDD_ADD_FILES_EXP_DIALOG DIALOG DISCARDABLE  0, 0, 428, 249
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Добавление файла для экспорта в профиль"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Подтвердить",IDOK,7,228,202,14
+    PUSHBUTTON      "Отмена",IDCANCEL,218,228,203,14
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_EDITLABELS | WS_BORDER | 
+                    WS_TABSTOP,7,22,414,170
+    CONTROL         "Дополнять участки центрами узлов",
+                    IDC_COMPLEMENT_CENTERS,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,7,7,137,10
+    LTEXT           "Запрос:",IDC_INPUT_QUERY,7,197,28,8
+    EDITTEXT        IDC_QUERY,8,206,413,14,ES_AUTOHSCROLL
+END
+
+IDD_ADD_FILES_IMP_DIALOG DIALOGEX 0, 0, 321, 273
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Добавление файла для импорта в профиль"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Подтвердить",IDOK,7,252,149,14,WS_DISABLED
+    PUSHBUTTON      "Отмена",IDCANCEL,165,252,149,14
+    GROUPBOX        "Импорт текста",IDC_IMPORT_TEXT,165,36,149,72
+    LTEXT           "Принимающий тип для ломанных:",IDC_SELECT_TYPE_LINES,17,
+                    48,116,8
+    COMBOBOX        IDC_TYPE_LINES,17,57,130,156,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Разбивать ломанные на отрезки",IDC_BREAK_LINES_SEGMENTS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,76,128,10
+    CONTROL         "Пропускать лишние точки",IDC_SKIP_SUPERFLUOUS_POINTS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,91,104,10
+    GROUPBOX        "Импорт ломанных",IDC_IMPORT_LINES,7,36,149,72
+    LTEXT           "Принимающий тип для текста:",IDC_SELECT_TYPE_TEXT,175,
+                    77,132,8
+    COMBOBOX        IDC_TYPE_TEXT,175,86,130,108,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Импорт обозначений",IDC_IMPORT_DENOTATIONS,7,113,149,
+                    117
+    LTEXT           "Тип преобразуемых ломанных:",
+                    IDC_SELECT_TYPE_DENOTATIONS,16,170,137,8
+    COMBOBOX        IDC_TYPE_DENOTATIONS,17,179,129,113,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Размер обозначений:",IDC_INPUT_SIZE_DENOTATIONS,17,197,
+                    74,8
+    EDITTEXT        IDC_SIZE_DENOTATIONS,17,206,129,14,ES_AUTOHSCROLL
+    GROUPBOX        "Импорт характеристик",IDC_IMPORT_CHARAKTERISTICS,165,
+                    113,149,117
+    CONTROL         "Импортировать характеристики",IDC_IMP_CHARAKTERISTICS,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,175,
+                    127,127,9
+    LTEXT           "Имя поля характеристики:",
+                    IDC_SELECT_NAME_CHARAKTERISTICS,175,143,131,8,
+                    WS_DISABLED
+    COMBOBOX        IDC_TYPE_CHARAKTERISTICS,175,179,129,106,
+                    CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Принимающий тип характеристики:",
+                    IDC_SELECT_TYPE_CHARAKTERISTICS,175,170,131,8,
+                    WS_DISABLED
+    COMBOBOX        IDC_FIELD_CHARAKTERISTICS,175,152,129,88,
+                    CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Высота надписей характеристик:",
+                    IDC_INPUT_SIZE_CHARACTERISTICS,175,197,131,8,WS_DISABLED
+    EDITTEXT        IDC_SIZE_CHARACTERISTICS,175,206,128,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED,0,HIDC_SIZE_CHARACTERISTICS
+    GROUPBOX        "Исходная кодировка текста",IDC_CODE_TEXT,175,46,129,26
+    GROUPBOX        "Преобразование обозначений",IDC_TRANSFORM_DENOTATIONS,
+                    17,123,129,41
+    LTEXT           "Файл с данными:",IDC_INPUT_FILE_NAME,7,7,61,8
+    EDITTEXT        IDC_FILE_NAME,7,16,269,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_OPEN_SELECT_FILE,286,16,28,14
+    CONTROL         "В окружности",IDC_CIRCLES,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,26,135,63,10
+    CONTROL         "В примитивы",IDC_PRIMITIVES,"Button",BS_AUTORADIOBUTTON,
+                    26,148,61,10
+    CONTROL         "Windows",IDC_WINDOWS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,185,57,45,10
+    CONTROL         "DOS",IDC_DOS,"Button",BS_AUTORADIOBUTTON,235,57,31,10
+    CONTROL         "Удалять из базы данных существующие графические объекты выбранного типа",
+                    IDC_DELETE_GRAPH_OBJECT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,235,307,10
+END
+
+IDD_EDIT_FILES_EXP_DIALOG DIALOG DISCARDABLE  0, 0, 428, 249
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Редактирование файла для экспорта"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Подтвердить",IDOK,7,228,201,14
+    PUSHBUTTON      "Отмена",IDCANCEL,218,228,203,14
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_EDITLABELS | 
+                    WS_BORDER | WS_TABSTOP,7,22,414,170
+    CONTROL         "Дополнять участки центрами узлов",
+                    IDC_COMPLEMENT_CENTERS,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,7,7,137,10
+    LTEXT           "Запрос:",IDC_INPUT_QUERY,7,197,28,8
+    EDITTEXT        IDC_QUERY,8,206,413,14,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_FILES_IMP_DIALOG DIALOG DISCARDABLE  0, 0, 321, 272
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Редактирование файла для импорта"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Подтвердить",IDOK,7,251,149,14
+    PUSHBUTTON      "Отмена",IDCANCEL,165,251,149,14
+    GROUPBOX        "Импорт текста",IDC_IMPORT_TEXT,165,36,149,72
+    LTEXT           "Принимающий тип для ломанных:",IDC_SELECT_TYPE_LINES,17,
+                    48,116,8
+    COMBOBOX        IDC_TYPE_LINES,17,57,130,156,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Разбивать ломанные на отрезки",IDC_BREAK_LINES_SEGMENTS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,76,128,10
+    CONTROL         "Пропускать лишние точки",IDC_SKIP_SUPERFLUOUS_POINTS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,91,104,10
+    GROUPBOX        "Импорт ломанных",IDC_IMPORT_LINES,7,36,149,72
+    LTEXT           "Принимающий тип для текста:",IDC_SELECT_TYPE_TEXT,175,
+                    77,133,8
+    COMBOBOX        IDC_TYPE_TEXT,175,86,130,108,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL
+    GROUPBOX        "Импорт обозначений",IDC_IMPORT_DENOTATIONS,7,113,149,
+                    117
+    LTEXT           "Тип преобразуемых ломанных:",
+                    IDC_SELECT_TYPE_DENOTATIONS,16,170,134,8
+    COMBOBOX        IDC_TYPE_DENOTATIONS,17,179,129,113,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Размер обозначений:",IDC_INPUT_SIZE_DENOTATIONS,17,197,
+                    74,8
+    EDITTEXT        IDC_SIZE_DENOTATIONS,17,206,129,14,ES_AUTOHSCROLL
+    GROUPBOX        "Импорт характеристик",IDC_IMPORT_CHARAKTERISTICS,165,
+                    113,149,117
+    CONTROL         "Импортировать характеристики",IDC_IMP_CHARAKTERISTICS,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,175,
+                    127,127,9
+    LTEXT           "Имя поля характеристики:",
+                    IDC_SELECT_NAME_CHARAKTERISTICS,174,143,133,8,
+                    WS_DISABLED
+    COMBOBOX        IDC_TYPE_CHARAKTERISTICS,175,179,129,106,
+                    CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Принимающий тип характеристики:",
+                    IDC_SELECT_TYPE_CHARAKTERISTICS,175,170,133,8,
+                    WS_DISABLED
+    COMBOBOX        IDC_FIELD_CHARAKTERISTICS,175,152,129,88,
+                    CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Высота надписей характеристик:",
+                    IDC_INPUT_SIZE_CHARACTERISTICS,175,197,133,8,WS_DISABLED
+    EDITTEXT        IDC_SIZE_CHARACTERISTICS,175,206,128,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    GROUPBOX        "Исходная кодировка текста",IDC_CODE_TEXT,175,46,129,26
+    GROUPBOX        "Преобразование обозначений",IDC_TRANSFORM_DENOTATIONS,
+                    17,123,129,41
+    LTEXT           "Файл с данными:",IDC_INPUT_FILE_NAME,7,7,61,8
+    EDITTEXT        IDC_FILE_NAME,7,16,269,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_OPEN_SELECT_FILE,286,16,28,14
+    CONTROL         "В окружности",IDC_CIRCLES,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,26,135,63,10
+    CONTROL         "В примитивы",IDC_PRIMITIVES,"Button",BS_AUTORADIOBUTTON,
+                    26,148,61,10
+    CONTROL         "Windows",IDC_WINDOWS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,185,57,45,10
+    CONTROL         "DOS",IDC_DOS,"Button",BS_AUTORADIOBUTTON,235,57,31,10
+    CONTROL         "Удалять из базы данных существующие графические объекты выбранного типа",
+                    IDC_DELETE_GRAPH_OBJECT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,235,307,10
+END
+
+IDD_EDIT_PROFILE_EXP_DIALOG DIALOG DISCARDABLE  0, 0, 488, 265
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Редактирование профиля экспорта"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Подтвердить",IDOK,7,244,231,14
+    PUSHBUTTON      "Отмена",IDCANCEL,248,244,233,14
+    LTEXT           "Папка:",IDC_SELECT_FOLDER,225,78,24,8
+    EDITTEXT        IDC_FOLDER,226,87,207,14,ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "...",IDC_OPEN_SELECT_FOLDER,442,86,28,14
+    LTEXT           "Раздел:",IDC_SELECT_SECTION,226,49,28,8
+    COMBOBOX        IDC_SECTION,226,58,245,153,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Параметры преобразования координат",
+                    IDC_PARAM_TRANS_COOR,7,7,199,230
+    LTEXT           "Коэффициент сжатия по оси абсцисс:",IDC_INPUT_FACTOR_X,
+                    17,19,179,8
+    EDITTEXT        IDC_FACTOR_X,17,28,178,14,ES_AUTOHSCROLL
+    LTEXT           "Коэффициент сжатия по оси ординат:",IDC_INPUT_FACTOR_Y,
+                    17,63,178,8
+    EDITTEXT        IDC_FACTOR_Y,17,72,179,14,ES_AUTOHSCROLL
+    LTEXT           "Величина сдвига влево по оси абсцисс:",
+                    IDC_INPUT_SHIFT_X,17,107,179,8
+    EDITTEXT        IDC_SHIFT_X,17,116,179,14,ES_AUTOHSCROLL
+    LTEXT           "Величина сдвига вниз по оси ординат:",IDC_INPUT_SHIFT_Y,
+                    17,154,178,8
+    EDITTEXT        IDC_SHIFT_Y,17,163,179,14,ES_AUTOHSCROLL
+    LTEXT           "Поворот в градусах по часовой стрелке:",IDC_INPUT_TURN,
+                    17,203,177,8
+    EDITTEXT        IDC_TURN,17,212,179,14,ES_AUTOHSCROLL
+    LTEXT           "Наименование графической области:",
+                    IDC_SELECT_GRAPH_AREA_NAME,226,145,228,8
+    COMBOBOX        IDC_GRAPH_AREA_NAME,226,154,246,83,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Параметры экспорта",IDC_PARAMETERS_EXPORT,216,117,265,
+                    120
+    GROUPBOX        "Единица измерения длины",IDC_UNIT,226,202,245,25
+    CONTROL         "м",IDC_METRE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,235,
+                    213,21,10
+    CONTROL         "мм",IDC_MILLIMETRE,"Button",BS_AUTORADIOBUTTON,262,213,
+                    27,10
+    GROUPBOX        "Характеристики профиля",IDC_CHARACTERISTICS_PROFILE,216,
+                    7,265,104
+    CONTROL         "Графическая область",IDC_GRAPH_AREA,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,226,131,92,10
+    LTEXT           "Описание проекции:",IDC_INPUT_DESCR_PROJECTION,225,173,
+                    70,8,WS_DISABLED
+    EDITTEXT        IDC_DESCRIPTION_PROJECTION,226,182,245,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    EDITTEXT        IDC_NAME_PROFILE,226,28,244,14,ES_AUTOHSCROLL
+    LTEXT           "Имя профиля экспорта:",IDC_INPUT_NAME_PROFILE,226,19,83,
+                    8
+END
+
+IDD_EDIT_PROFILE_IMP_DIALOG DIALOG DISCARDABLE  0, 0, 256, 315
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Редактирование профиля импорта"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Подтвердить",IDOK,7,294,117,14
+    PUSHBUTTON      "Отмена",IDCANCEL,132,294,117,14
+    GROUPBOX        "Параметры преобразования координат",
+                    IDC_PARAM_TRANS_COOR,7,108,242,179
+    LTEXT           "Коэффициент растяжения по оси абсцисс:",
+                    IDC_INPUT_FACTOR_X,17,120,179,8
+    EDITTEXT        IDC_FACTOR_X,17,129,222,14,ES_AUTOHSCROLL
+    LTEXT           "Коэффициент растяжения по оси ординат:",
+                    IDC_INPUT_FACTOR_Y,17,147,178,8
+    EDITTEXT        IDC_FACTOR_Y,17,156,222,14,ES_AUTOHSCROLL
+    LTEXT           "Величина сдвига вправо по оси абсцисс:",
+                    IDC_INPUT_SHIFT_X,17,173,179,8
+    EDITTEXT        IDC_SHIFT_X,17,181,222,14,ES_AUTOHSCROLL
+    LTEXT           "Величина сдвига вверх по оси ординат:",
+                    IDC_INPUT_SHIFT_Y,17,199,178,8
+    EDITTEXT        IDC_SHIFT_Y,17,208,222,14,ES_AUTOHSCROLL
+    LTEXT           "Поворот в градусах против часовой стрелки:",
+                    IDC_INPUT_TURN,17,226,177,8
+    EDITTEXT        IDC_TURN,17,235,222,14,ES_AUTOHSCROLL
+    CONTROL         "Обычный",IDC_USUAL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,27,264,47,10
+    CONTROL         "Инверсный",IDC_INVERT,"Button",BS_AUTORADIOBUTTON,82,
+                    264,55,10
+    GROUPBOX        "Исходный порядок координат",
+                    IDC_INITIAL_ORDER_COORDINATES,17,252,222,26
+    LTEXT           "Раздел:",IDC_SELECT_SECTION,17,46,28,8
+    COMBOBOX        IDC_SECTION,17,55,222,153,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Характеристики профиля",IDC_CHARACTERISTICS_PROFILE,7,7,
+                    242,96
+    LTEXT           "Папка:",IDC_SELECT_FOLDER,17,71,23,8
+    EDITTEXT        IDC_FOLDER,17,80,185,14,ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "...",IDC_OPEN_SELECT_FOLDER,210,79,28,14
+    EDITTEXT        IDC_NAME_PROFILE,17,28,221,14,ES_AUTOHSCROLL
+    LTEXT           "Имя профиля импорта:",IDC_INPUT_NAME_PROFILE,17,19,82,8
+END
+
+IDD_EDIT_PROFILE_TRANS_DIALOG DIALOG DISCARDABLE  0, 0, 256, 314
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Редактирование профиля преобразования координат"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Подтвердить",IDOK,7,293,117,14
+    PUSHBUTTON      "Отмена",IDCANCEL,132,293,117,14
+    GROUPBOX        "Параметры преобразования координат",
+                    IDC_PARAM_TRANS_COOR,7,81,242,205
+    LTEXT           "Коэффициент растяжения по оси абсцисс:",
+                    IDC_INPUT_FACTOR_X,17,93,179,8
+    EDITTEXT        IDC_FACTOR_X,17,102,222,14,ES_AUTOHSCROLL
+    LTEXT           "Коэффициент растяжения по оси ординат:",
+                    IDC_INPUT_FACTOR_Y,17,120,178,8
+    EDITTEXT        IDC_FACTOR_Y,17,129,222,14,ES_AUTOHSCROLL
+    LTEXT           "Величина сдвига вправо по оси абсцисс:",
+                    IDC_INPUT_SHIFT_X,17,146,179,8
+    EDITTEXT        IDC_SHIFT_X,17,155,222,14,ES_AUTOHSCROLL
+    LTEXT           "Величина сдвига вверх по оси ординат:",
+                    IDC_INPUT_SHIFT_Y,17,172,178,8
+    EDITTEXT        IDC_SHIFT_Y,17,181,222,14,ES_AUTOHSCROLL
+    LTEXT           "Поворот в градусах против часовой стрелки:",
+                    IDC_INPUT_TURN,17,199,177,8
+    EDITTEXT        IDC_TURN,17,208,222,14,ES_AUTOHSCROLL
+    LTEXT           "Раздел:",IDC_SELECT_SECTION,17,46,28,8
+    COMBOBOX        IDC_SECTION,17,55,222,153,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Размер сетки по горизонтали:",IDC_INPUT_SIZE_X,17,226,
+                    178,8
+    EDITTEXT        IDC_SIZE_X,17,235,222,14,ES_AUTOHSCROLL
+    LTEXT           "Размер сетки по вертикали:",IDC_INPUT_SIZE_Y,17,253,177,
+                    8
+    EDITTEXT        IDC_SIZE_Y,17,262,222,14,ES_AUTOHSCROLL
+    GROUPBOX        "Характеристики профиля",IDC_CHARACTERISTICS_PROFILE,7,7,
+                    242,69
+    EDITTEXT        IDC_NAME_PROFILE,17,27,221,14,ES_AUTOHSCROLL
+    LTEXT           "Имя профиля преобразования координат:",
+                    IDC_INPUT_NAME_PROFILE,17,18,146,8
+END
+
+IDD_EDIT_PROFILE_REORG_DIALOG DIALOG DISCARDABLE  0, 0, 256, 106
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Редактирование профиля реорганизации координат"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Подтвердить",IDOK,7,85,117,14
+    PUSHBUTTON      "Отмена",IDCANCEL,132,85,117,14
+    LTEXT           "Раздел:",IDC_SELECT_SECTION,17,45,28,8
+    COMBOBOX        IDC_SECTION,17,55,222,153,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "Характеристики профиля",IDC_CHARACTERISTICS_PROFILE,7,7,
+                    242,70
+    EDITTEXT        IDC_NAME_PROFILE,17,27,221,14,ES_AUTOHSCROLL
+    LTEXT           "Имя профиля реорганизации координат:",
+                    IDC_INPUT_NAME_PROFILE,17,18,143,8
+END
+
+IDD_ADD_SAMPLE_PROFILE_DIALOG DIALOG DISCARDABLE  0, 0, 259, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Создание профиля по образцу"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Подтвердить",IDOK,7,71,118,14,WS_DISABLED
+    PUSHBUTTON      "Отмена",IDCANCEL,134,71,118,14
+    LTEXT           "Имя профиля:",IDC_INPUT_NAME_PROFILE,7,39,145,8
+    EDITTEXT        IDC_NAME_PROFILE,8,48,244,14,ES_AUTOHSCROLL
+    LTEXT           "Вид профиля:",IDC_SELECT_TYPE_PROFILE,7,7,245,8
+    COMBOBOX        IDC_TYPE_PROFILE,7,16,245,69,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 253, 87
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "О программе"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Закрыть",IDOK,97,65,50,14
+    GROUPBOX        "",IDC_STATIC,37,4,207,53
+    CONTROL         "GraphExpImp - выполнение операций экспорта/импорта",
+                    IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,46,15,
+                    190,8
+    CONTROL         "Версия 1.01 от 01.06.2010",IDC_STATIC,"Static",
+                    SS_LEFTNOWORDWRAP | WS_GROUP,46,28,89,8
+    LTEXT           "© 2010 г. Якубович А. В. для ИВК ""Поток-Модель""",
+                    IDC_STATIC,45,42,172,8
+    ICON            IDR_MAINFRAME,IDC_STATIC,8,22,20,20
+END
+
+IDD_NAME_NEW_TABLE DIALOG DISCARDABLE  0, 0, 186, 58
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Имя таблицы"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Подтвердить",IDOK,7,37,82,14,WS_DISABLED
+    PUSHBUTTON      "Отмена",IDCANCEL,98,37,81,14
+    LTEXT           "Имя новой таблицы:",IDC_INPUT_NAME_TABLE,7,7,70,8
+    EDITTEXT        IDC_NAME_TABLE,7,16,172,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_ADD_PROFILE_DIALOG DLGINIT
+BEGIN
+    IDC_TYPE_PROFILE, 0x403, 8, 0
+0xeadd, 0xeff1, 0xf0ee, 0x00f2, 
+    IDC_TYPE_PROFILE, 0x403, 7, 0
+0xecc8, 0xeeef, 0xf2f0, "\000" 
+    IDC_TYPE_PROFILE, 0x403, 25, 0
+0xf0cf, 0xeee5, 0xf0e1, 0xe7e0, 0xe2ee, 0xede0, 0xe5e8, 0xea20, 0xeeee, 
+0xe4f0, 0xede8, 0xf2e0, "\000" 
+    IDC_TYPE_PROFILE, 0x403, 24, 0
+0xe5d0, 0xf0ee, 0xe0e3, 0xe8ed, 0xe0e7, 0xe8f6, 0x20ff, 0xeeea, 0xf0ee, 
+0xe8e4, 0xe0ed, 0x00f2, 
+    0
+END
+
+IDD_ADD_SAMPLE_PROFILE_DIALOG DLGINIT
+BEGIN
+    IDC_TYPE_PROFILE, 0x403, 8, 0
+0xeadd, 0xeff1, 0xf0ee, 0x00f2, 
+    IDC_TYPE_PROFILE, 0x403, 7, 0
+0xecc8, 0xeeef, 0xf2f0, "\000" 
+    IDC_TYPE_PROFILE, 0x403, 25, 0
+0xf0cf, 0xeee5, 0xf0e1, 0xe7e0, 0xe2ee, 0xede0, 0xe5e8, 0xea20, 0xeeee, 
+0xe4f0, 0xede8, 0xf2e0, "\000" 
+    IDC_TYPE_PROFILE, 0x403, 24, 0
+0xe5d0, 0xf0ee, 0xe0e3, 0xe8ed, 0xe0e7, 0xe8f6, 0x20ff, 0xeeea, 0xf0ee, 
+0xe8e4, 0xe0ed, 0x00f2, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ADD_PROFILE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 481
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 295
+    END
+
+    IDD_ADD_FILES_EXP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 421
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+    END
+
+    IDD_ADD_FILES_IMP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 314
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 266
+    END
+
+    IDD_EDIT_FILES_EXP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 421
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+    END
+
+    IDD_EDIT_FILES_IMP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 314
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 265
+    END
+
+    IDD_EDIT_PROFILE_EXP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 481
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 258
+    END
+
+    IDD_EDIT_PROFILE_IMP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 308
+    END
+
+    IDD_EDIT_PROFILE_TRANS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 307
+    END
+
+    IDD_EDIT_PROFILE_REORG_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+
+    IDD_ADD_SAMPLE_PROFILE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 252
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 85
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 246
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+
+    IDD_NAME_NEW_TABLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 51
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS DISCARDABLE 
+BEGIN
+    "A",            ID_PROGRAM_ABOUT,       VIRTKEY, CONTROL, NOINVERT
+    "D",            ID_OPERATIONS_DELETE,   VIRTKEY, CONTROL, NOINVERT
+    "E",            ID_OPERATIONS_EDIT,     VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_OPERATIONS_CREATE_FILE, VIRTKEY, CONTROL, NOINVERT
+    "H",            ID_PROGRAM_HELP,        VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_OPERATIONS_CREATE_PROFILE, VIRTKEY, CONTROL, NOINVERT
+    "R",            ID_OPERATIONS_EXECUTE,  VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_OPERATIONS_CREATE_SAMPLE, VIRTKEY, CONTROL, NOINVERT
+    "X",            ID_APP_EXIT,            VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_PICTURE_PROFILE_EXP BITMAP  DISCARDABLE     "res\\ProfileExp.bmp"
+IDB_PICTURE_PROFILE_IMP BITMAP  DISCARDABLE     "res\\ProfileImp.bmp"
+IDB_PICTURE_PROFILE_TRANS BITMAP  DISCARDABLE     "res\\ProfileTrans.bmp"
+IDB_PICTURE_PROFILE_REORG BITMAP  DISCARDABLE     "res\\ProfileReorg.bmp"
+IDB_PICTURE_FILE_EXP    BITMAP  DISCARDABLE     "res\\FileExp.bmp"
+IDB_PICTURE_FILE_IMP    BITMAP  DISCARDABLE     "res\\FileImp.bmp"
+IDB_PICTURE_CITY        BITMAP  DISCARDABLE     "res\\City.bmp"
+IDR_TOOLBAR             BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR TOOLBAR MOVEABLE PURE  32, 32
+BEGIN
+    BUTTON      ID_CREATE_PROFILE
+    BUTTON      ID_CREATE_FILE
+    BUTTON      ID_CREATE_SAMPLE
+    BUTTON      ID_EDIT
+    BUTTON      ID_DELETE
+    BUTTON      ID_EXECUTE
+    BUTTON      ID_EXIT
+    SEPARATOR
+    BUTTON      ID_OPEN_HELP
+    BUTTON      ID_OPEN_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_CREATE_PROFILE       "\nСоздать новый профиль"
+    ID_CREATE_FILE          "\nДобавить файл в профиль"
+    ID_CREATE_SAMPLE        "\nСоздать профиль по образцу"
+    ID_EDIT                 "\nРедактировать"
+    ID_DELETE               "\nУдалить"
+    ID_EXECUTE              "\nВыполнить"
+    ID_EXIT                 "\nВыход"
+    ID_OPEN_HELP            "\nПомощь"
+    ID_OPEN_ABOUT           "\nО программе"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STATUS_STRING       "Готово"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\GraphExpImp.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

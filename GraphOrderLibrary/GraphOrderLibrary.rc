@@ -1,0 +1,402 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian (Russia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\GraphOrderLibrary.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "GraphOrderLibrary DLL"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "GraphOrderLibrary"
+            VALUE "LegalCopyright", "Copyright (C) 2016"
+            VALUE "OriginalFilename", "GraphOrderLibrary.DLL"
+            VALUE "ProductName", "GraphOrderLibrary Dynamic Link Library"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PREVIEW_TOOLBAR DIALOG 0, 0, 308, 21
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Печать...",AFX_ID_PREVIEW_PRINT,3,3,50,15
+    PUSHBUTTON      "Увеличить",AFX_ID_PREVIEW_ZOOMIN,57,3,50,15
+    PUSHBUTTON      "Уменьшить",AFX_ID_PREVIEW_ZOOMOUT,111,3,50,15
+    PUSHBUTTON      "Закрыть",AFX_ID_PREVIEW_CLOSE,165,3,50,15
+END
+
+IDD_GENERAL_SETTINGS_DIALOG DIALOGEX 0, 0, 281, 258
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Общие установки"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Изменить цвет",IDC_CHANGE_COLOR_STATE,16,125,97,14
+    COMBOBOX        IDC_SELECT_STATE_ORDER,16,105,98,69,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Параметры отображения",IDC_DISPLAY_VIEWS,7,7,116,74
+    CONTROL         "Отображать сетку",IDC_VIEW_GRID,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,20,98,10
+    CONTROL         "Отображать легенду",IDC_VIEW_LEGEND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,34,98,10
+    GROUPBOX        "Цвет",IDC_COLOR,7,86,116,63
+    LTEXT           "Состяние заявки:",IDC_STATE_ORDER,16,96,61,8
+    DEFPUSHBUTTON   "Подтвердить",IDOK,7,237,130,14
+    PUSHBUTTON      "Отмена",IDCANCEL,144,237,130,14
+    LTEXT           "Ширина столбца:",IDC_WIDTH_COLUMN,16,47,98,8
+    EDITTEXT        IDC_INPUT_WIDTH_COLUMN,16,57,98,14,ES_AUTOHSCROLL
+    GROUPBOX        "Сортировка",IDC_SORT,131,7,143,142
+    GROUPBOX        "Вид",IDC_TYPE_SORT,140,16,125,43
+    CONTROL         "По возрастанию",IDC_INCREASE_SORT,"Button",BS_AUTORADIOBUTTON,148,28,108,10
+    CONTROL         "По убыванию",IDC_DECREASE_SORT,"Button",BS_AUTORADIOBUTTON,148,42,109,10
+    GROUPBOX        "Данные",IDC_DATA_SORT,140,63,125,77
+    CONTROL         "Номер заявки",IDC_NUMBER_ORDER_SORT,"Button",BS_AUTORADIOBUTTON | WS_GROUP,147,75,109,10
+    CONTROL         "Административный район",IDC_ADM_REGION_NUMBER_SORT,
+                    "Button",BS_AUTORADIOBUTTON,147,91,109,10
+    CONTROL         "Дата приёма заявки",IDC_DATE_RECEIPT_ORDER_SORT,"Button",BS_AUTORADIOBUTTON,147,107,110,10
+    CONTROL         "Эксплуатационная служба",IDC_OPERATIONAL_SERVICE_SORT,
+                    "Button",BS_AUTORADIOBUTTON,147,123,110,10
+    GROUPBOX        "Фильтрация",IDC_FILTER,7,153,267,57
+    CONTROL         "Административный район",IDC_ADM_REGION_NAME_FILTER,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,168,116,10
+    CONTROL         "Эксплуатационный район",IDC_OPERATIONAL_SERVICE_FILTER,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,189,116,10
+    COMBOBOX        IDC_SELECT_ADM_REGION_FILTER,140,167,125,75,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_SELECT_OPERATIONAL_FILTER,140,188,125,72,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Шрифт надписей",IDC_INSCRIPTION_FONT,7,216,130,14
+    PUSHBUTTON      "Шрифт названий",IDC_NAME_FONT,144,216,130,14
+END
+
+IDD_ADDITIONAL_SETTINGS_DIALOG DIALOGEX 0, 0, 176, 169
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Установки интервала"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Вертикальный масштаб",IDC_VERTICAL_SCALE,7,7,162,134
+    LTEXT           "Дата начала периода:",IDC_DATE_BEGIN_PERIOD,35,19,76,8
+    CONTROL         "DateTimePicker1",IDC_SELECT_DATE_BEGIN_PERIOD,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,35,28,107,15
+    LTEXT           "Длительность периода (ч):",IDC_DURATION_PERIOD,17,78,88,8
+    LTEXT           "Шаг (ч):",IDC_VALUE_STEP,17,108,26,8
+    EDITTEXT        IDC_INPUT_STEP,17,117,143,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Подтвердить",IDOK,7,148,78,14
+    PUSHBUTTON      "Отмена",IDCANCEL,91,148,78,14
+    EDITTEXT        IDC_INPUT_DURATION_PERIOD,17,88,143,14,ES_AUTOHSCROLL
+    CONTROL         "DateTimePicker3",IDC_SELECT_TIME_BEGIN_PERIOD,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,35,57,107,15
+    LTEXT           "Время начала периода:",IDC_TIME_BEGIN_PERIOD,35,48,80,8
+    PUSHBUTTON      "",IDC_REDUCE_DATE,17,20,13,52,BS_ICON
+    PUSHBUTTON      "",IDC_INCREASE_DATE,146,20,13,52,BS_ICON
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 257, 83
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "О программе"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Закрыть",IDOK,102,62,50,14
+    GROUPBOX        "",IDC_STATIC,52,3,198,51
+    LTEXT           "GraphOrder - отображение графика заявок",IDC_STATIC,61,13,147,8
+    LTEXT           "Версия 1.01 от 07.12.2015",IDC_STATIC,62,26,90,8
+    LTEXT           "@ 2015 г. Якубович А. В. для ИВК ""Поток-МОдель""",IDC_STATIC,62,39,171,8
+END
+
+IDD_CHOOSE_ORDER_DIALOG DIALOGEX 0, 0, 308, 205
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Выбор номера заявки"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Подтвердить",IDOK,7,184,143,14
+    PUSHBUTTON      "Отмена",IDCANCEL,158,184,143,14
+    LTEXT           "Выберите номер заявки:",IDC_STATIC,7,7,84,8
+    LISTBOX         IDC_ORDER_LIST,7,16,294,162,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TOOLBAR             BITMAP                  "res\\toolbar.bmp"
+IDR_TOOLBAR             BITMAP                  "res\\ToolbarOld.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\GraphOrderMDI.ico"
+IDR_GRAPHOTYPE          ICON                    "res\\GraphOrderMDIDoc.ico"
+IDI_REDUCE              ICON                    "res\\Reduce.ico"
+IDI_INCREASE            ICON                    "res\\Increase.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_POPUP_MENU MENU
+BEGIN
+    POPUP "Всплывающее меню"
+    BEGIN
+        MENUITEM "Отображение содержимого",     ID_POPUP_OPEN_ORDER
+    END
+END
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "Окно"
+    BEGIN
+        MENUITEM "Новое",                       ID_WINDOW_NEW
+    END
+    POPUP "Справка"
+    BEGIN
+        MENUITEM "Помощь",                      ID_OPEN_HELP
+        MENUITEM "О программе",                 ID_OPEN_ABOUT
+    END
+END
+
+IDR_GraphOrderTYPE MENU
+BEGIN
+    POPUP "График"
+    BEGIN
+        MENUITEM "Настройка печати...",         ID_FILE_PRINT_SETUP
+        MENUITEM "Предварительный просмотр",    ID_FILE_PRINT_PREVIEW
+        MENUITEM "Печать...",                   ID_FILE_PRINT
+        MENUITEM SEPARATOR
+        MENUITEM "Выход",                       ID_APP_EXIT
+    END
+    POPUP "Вид"
+    BEGIN
+        POPUP "Масштаб"
+        BEGIN
+            MENUITEM "Увеличить",                   ID_VIEW_ENLARGE
+            MENUITEM "Уменьшить",                   ID_VIEW_REDUCE
+            MENUITEM "В окно",                      ID_VIEW_TO_WINDOW
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Общие установки...",          ID_VIEW_GENERAL_SETTINGS
+        MENUITEM "Установки интервала...",      ID_VIEW_ADDITIONAL_SETTINGS
+        MENUITEM "Вперёд",                      ID_VIEW_NEXT
+        MENUITEM "Назад",                       ID_VIEW_BACK
+    END
+    POPUP "Окно"
+    BEGIN
+        MENUITEM "Новое",                       ID_WINDOW_NEW
+        MENUITEM "Выровнять по горизонтали",    ID_WINDOW_TILE_HORZ
+        MENUITEM "Выровнять по вертикали",      ID_WINDOW_TILE_VERT
+        MENUITEM "Выровнять каскадом",          ID_WINDOW_CASCADE
+    END
+    POPUP "Справка"
+    BEGIN
+        MENUITEM "Помощь",                      ID_OPEN_HELP
+        MENUITEM "О программе",                 ID_OPEN_ABOUT
+    END
+END
+
+IDR_SECOND_POPUP_MENU MENU
+BEGIN
+    POPUP "Всплывающее меню"
+    BEGIN
+        MENUITEM "Регистрация",                 ID_POPUP_REGISTR_ORDER
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR TOOLBAR 32, 32
+BEGIN
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_INCREASE
+    BUTTON      ID_REDUCE
+    BUTTON      ID_GENERAL_SETTINGS
+    BUTTON      ID_ADDITIONAL_SETTINGS
+    BUTTON      ID_BACK
+    BUTTON      ID_NEXT
+    BUTTON      ID_EXIT
+    BUTTON      ID_OPEN_HELP
+    BUTTON      ID_OPEN_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_GENERAL_SETTINGS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 251
+    END
+
+    IDD_ADDITIONAL_SETTINGS_DIALOG, DIALOG
+    BEGIN
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 76
+    END
+
+    IDD_CHOOSE_ORDER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 301
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 198
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    ID_INCREASE             "\nУвеличить"
+    ID_REDUCE               "\nУменьшить"
+    ID_GENERAL_SETTINGS     "\nОбщие установки"
+    ID_ADDITIONAL_SETTINGS  "\nУстановки интервала"
+    ID_NEXT                 "\nВперёд"
+    ID_BACK                 "\nНазад"
+    ID_EXIT                 "\nВыход"
+    ID_OPEN_HELP            "\nПомощь"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_PRINT           "\nПечать"
+END
+
+STRINGTABLE
+BEGIN
+    ID_OPEN_ABOUT           "\nО программе"
+END
+
+#endif    // Russian (Russia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\GraphOrderLibrary.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

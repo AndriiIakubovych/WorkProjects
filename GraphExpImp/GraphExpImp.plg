@@ -1,0 +1,122 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: GraphExpImp - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x419 /fo"Debug/GraphExpImp.res" /d "_DEBUG" /d "_AFXDLL" "M:\AndreyYa\GraphExpImp\GraphExpImp.rc"" 
+Creating temporary file "C:\Users\AYA~1.POT\AppData\Local\Temp\RSP42B.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/GraphExpImp.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"M:\AndreyYa\GraphExpImp\AboutProgramDlg.cpp"
+"M:\AndreyYa\GraphExpImp\AddFilesExpDlg.cpp"
+"M:\AndreyYa\GraphExpImp\AddFilesImpDlg.cpp"
+"M:\AndreyYa\GraphExpImp\AddProfileDlg.cpp"
+"M:\AndreyYa\GraphExpImp\AddSampleProfileDlg.cpp"
+"M:\AndreyYa\GraphExpImp\AdvToolBar.cpp"
+"M:\AndreyYa\GraphExpImp\DesspaceRead.cpp"
+"M:\AndreyYa\GraphExpImp\EditFilesExpDlg.cpp"
+"M:\AndreyYa\GraphExpImp\EditFilesImpDlg.cpp"
+"M:\AndreyYa\GraphExpImp\EditProfileExpDlg.cpp"
+"M:\AndreyYa\GraphExpImp\EditProfileImpDlg.cpp"
+"M:\AndreyYa\GraphExpImp\EditProfileReorgDlg.cpp"
+"M:\AndreyYa\GraphExpImp\EditProfileTransDlg.cpp"
+"M:\AndreyYa\GraphExpImp\FilesExpImpRead.cpp"
+"M:\AndreyYa\GraphExpImp\GraphExpImp.cpp"
+"M:\AndreyYa\GraphExpImp\GraphExpImpDoc.cpp"
+"M:\AndreyYa\GraphExpImp\GraphExpImpView.cpp"
+"M:\AndreyYa\GraphExpImp\ItemMenuRead.cpp"
+"M:\AndreyYa\GraphExpImp\MainFrm.cpp"
+"M:\AndreyYa\GraphExpImp\NameNewTableDlg.cpp"
+"M:\AndreyYa\GraphExpImp\NregionRead.cpp"
+"M:\AndreyYa\GraphExpImp\PlsizeRead.cpp"
+"M:\AndreyYa\GraphExpImp\ProfilesExpImpRead.cpp"
+"M:\AndreyYa\GraphExpImp\TplevRead.cpp"
+"M:\AndreyYa\GraphExpImp\TplineRead.cpp"
+"M:\AndreyYa\GraphExpImp\TpnameRead.cpp"
+]
+Creating command line "cl.exe @C:\Users\AYA~1.POT\AppData\Local\Temp\RSP42B.tmp" 
+Creating temporary file "C:\Users\AYA~1.POT\AppData\Local\Temp\RSP42C.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/GraphExpImp.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"M:\AndreyYa\GraphExpImp\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\AYA~1.POT\AppData\Local\Temp\RSP42C.tmp" 
+Creating temporary file "C:\Users\AYA~1.POT\AppData\Local\Temp\RSP42D.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/GraphExpImp.pdb" /debug /machine:I386 /out:"Debug/GraphExpImp.exe" /pdbtype:sept 
+.\Debug\AboutProgramDlg.obj
+.\Debug\AddFilesExpDlg.obj
+.\Debug\AddFilesImpDlg.obj
+.\Debug\AddProfileDlg.obj
+.\Debug\AddSampleProfileDlg.obj
+.\Debug\AdvToolBar.obj
+.\Debug\DesspaceRead.obj
+.\Debug\EditFilesExpDlg.obj
+.\Debug\EditFilesImpDlg.obj
+.\Debug\EditProfileExpDlg.obj
+.\Debug\EditProfileImpDlg.obj
+.\Debug\EditProfileReorgDlg.obj
+.\Debug\EditProfileTransDlg.obj
+.\Debug\FilesExpImpRead.obj
+.\Debug\GraphExpImp.obj
+.\Debug\GraphExpImpDoc.obj
+.\Debug\GraphExpImpView.obj
+.\Debug\ItemMenuRead.obj
+.\Debug\MainFrm.obj
+.\Debug\NameNewTableDlg.obj
+.\Debug\NregionRead.obj
+.\Debug\PlsizeRead.obj
+.\Debug\ProfilesExpImpRead.obj
+.\Debug\StdAfx.obj
+.\Debug\TplevRead.obj
+.\Debug\TplineRead.obj
+.\Debug\TpnameRead.obj
+.\Debug\GraphExpImp.res
+]
+Creating command line "link.exe @C:\Users\AYA~1.POT\AppData\Local\Temp\RSP42D.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+AboutProgramDlg.cpp
+AddFilesExpDlg.cpp
+AddFilesImpDlg.cpp
+AddProfileDlg.cpp
+AddSampleProfileDlg.cpp
+AdvToolBar.cpp
+DesspaceRead.cpp
+EditFilesExpDlg.cpp
+EditFilesImpDlg.cpp
+EditProfileExpDlg.cpp
+EditProfileImpDlg.cpp
+EditProfileReorgDlg.cpp
+EditProfileTransDlg.cpp
+FilesExpImpRead.cpp
+GraphExpImp.cpp
+GraphExpImpDoc.cpp
+GraphExpImpView.cpp
+ItemMenuRead.cpp
+MainFrm.cpp
+NameNewTableDlg.cpp
+Generating Code...
+Compiling...
+NregionRead.cpp
+PlsizeRead.cpp
+ProfilesExpImpRead.cpp
+TplevRead.cpp
+TplineRead.cpp
+TpnameRead.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+GraphExpImp.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

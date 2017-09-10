@@ -1,0 +1,58 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: GraphOrderLibrary - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x419 /fo"Release/GraphOrderLibrary.res" /d "NDEBUG" /d "_AFXDLL" "C:\Users\aya.POTOK-MODEL\Desktop\GraphOrderLibrary\GraphOrderLibrary.rc"" 
+Creating temporary file "C:\Users\AYA~1.POT\AppData\Local\Temp\RSP6FD8.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_AFXEXT" /Fp"Release/GraphOrderLibrary.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\aya.POTOK-MODEL\Desktop\GraphOrderLibrary\GraphOrderLibrary.cpp"
+"C:\Users\aya.POTOK-MODEL\Desktop\GraphOrderLibrary\ChildFrm.cpp"
+"C:\Users\aya.POTOK-MODEL\Desktop\GraphOrderLibrary\GraphOrderMDIDoc.cpp"
+"C:\Users\aya.POTOK-MODEL\Desktop\GraphOrderLibrary\GraphOrderMDIView.cpp"
+"C:\Users\aya.POTOK-MODEL\Desktop\GraphOrderLibrary\MainFrm.cpp"
+]
+Creating command line "cl.exe @C:\Users\AYA~1.POT\AppData\Local\Temp\RSP6FD8.tmp" 
+Creating temporary file "C:\Users\AYA~1.POT\AppData\Local\Temp\RSP6FD9.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_AFXEXT" /Fp"Release/GraphOrderLibrary.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\aya.POTOK-MODEL\Desktop\GraphOrderLibrary\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\AYA~1.POT\AppData\Local\Temp\RSP6FD9.tmp" 
+Creating temporary file "C:\Users\AYA~1.POT\AppData\Local\Temp\RSP6FDA.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"Release/GraphOrderLibrary.pdb" /machine:I386 /def:".\GraphOrderLibrary.def" /out:"Release/GraphOrderLibrary.dll" /implib:"Release/GraphOrderLibrary.lib" 
+".\Release\GraphOrderLibrary.obj"
+".\Release\StdAfx.obj"
+".\Release\GraphOrderLibrary.res"
+".\Release\ChildFrm.obj"
+".\Release\GraphOrderMDIDoc.obj"
+".\Release\GraphOrderMDIView.obj"
+".\Release\MainFrm.obj"
+]
+Creating command line "link.exe @C:\Users\AYA~1.POT\AppData\Local\Temp\RSP6FDA.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+GraphOrderLibrary.cpp
+ChildFrm.cpp
+GraphOrderMDIDoc.cpp
+GraphOrderMDIView.cpp
+MainFrm.cpp
+Generating Code...
+Linking...
+   Creating library Release/GraphOrderLibrary.lib and object Release/GraphOrderLibrary.exp
+
+
+
+<h3>Results</h3>
+GraphOrderLibrary.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
